@@ -57,4 +57,3 @@ Filter transactions by category
 * Modular and reusable components: Transactions, Charts, ExportButton.
 * Local storage integration for persistent transactions.
 * Easy-to-extend architecture for additional analytics or categories.
-* 
