@@ -1,0 +1,307 @@
+/*  THEME VARIABLES (Centralized Control) */
+:root {
+  /* Global Colors */
+  --bg-app: #f8fafc;
+  --bg-card: #ffffff;
+  --bg-input: #ffffff;
+  --text-main: #1e293b;
+  --text-muted: #64748b;
+  
+  /* Brand/Accent Colors */
+  --accent: #6366f1;         /* Indigo */
+  --accent-hover: #4f46e5;
+  
+  /* Table Specific Colors */
+  --table-header-bg: #f1f5f9;
+  --table-header-text: #475569;
+  --table-border: #e2e8f0;
+  --table-row-hover: #f8fafc;
+
+  /* UI Specs */
+  --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.07), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+  --radius: 12px;
+  --transition: all 0.2s ease;
+}
+
+/* Dark Mode Overrides */
+.container.dark {
+  --bg-app: #0f172a;
+  --bg-card: #1e293b;
+  --bg-input: #0f172a;
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  
+  /* Table Dark Mode */
+  --table-header-bg: #334155;
+  --table-header-text: #f1f5f9;
+  --table-border: #334155;
+  --table-row-hover: #1e293b;
+  
+  --shadow: 0 10px 15px -3px rgb(0 0 0 / 0.3);
+}
+
+/* RESET & BASE STYLES */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  background-color: var(--bg-app);
+  color: var(--text-main);
+  min-height: 100vh;
+  padding: 16px;
+  transition: background-color 0.3s ease;
+}
+
+h1 { font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; }
+h2 { font-size: 1.1rem; font-weight: 600; margin-top: 1.5rem; margin-bottom: 0.75rem; }
+
+/*  COMPONENTS (Cards, Forms, Buttons) */
+
+/* Top Bar Control Group */
+.top-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+/* Universal Input Styling */
+input, select {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid var(--table-border);
+  background: var(--bg-input);
+  color: var(--text-main);
+  font-size: 14px;
+  transition: var(--transition);
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+
+/* Buttons */
+button {
+  padding: 10px 20px;
+  background: var(--accent);
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+button:hover {
+  background: var(--accent-hover);
+  transform: translateY(-1px);
+}
+
+/* Stats Cards */
+.cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.card {
+  background: var(--bg-card);
+  padding: 20px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border: 1px solid var(--table-border);
+}
+
+/* Transaction Form */
+.tx-form {
+  background: var(--bg-card);
+  padding: 20px;
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 20px 0;
+  border: 1px solid var(--table-border);
+}
+
+/*  DATA DISPLAY (Table & Mobile Cards) */
+
+/* Mobile Transaction Cards (Visible on Mobile) */
+.tx-card {
+  background: var(--bg-card);
+  padding: 16px;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  border-left: 4px solid var(--accent);
+  box-shadow: var(--shadow);
+}
+
+/* Desktop Table Styling */
+table {
+  display: none; /* Hidden on mobile */
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  overflow: hidden; /* Ensures corners are rounded */
+  box-shadow: var(--shadow);
+  border: 1px solid var(--table-border);
+}
+
+th {
+  background-color: var(--table-header-bg);
+  color: var(--table-header-text);
+  font-weight: 600;
+  text-align: left;
+  padding: 14px 18px;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+td {
+  padding: 14px 18px;
+  border-top: 1px solid var(--table-border);
+  font-size: 14px;
+}
+
+tr:hover td {
+  background-color: var(--table-row-hover);
+}
+
+/* Chart Containers */
+.charts {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.chart-box {
+  background: var(--bg-card);
+  padding: 20px;
+  border-radius: var(--radius);
+  border: 1px solid var(--table-border);
+}
+
+.monthly-grid {
+  display: grid;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.insight-card {
+  background: #f5f5f5;
+  padding: 12px;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+.charts-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Desktop: Line + Pie side by side */
+.charts-row {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+@media (min-width: 1024px) {
+  .charts-row {
+    flex-direction: row;
+  }
+
+  .chart-box {
+    flex: 1;
+    min-width: 300px;
+  }
+}
+
+/* Top-bar date filters */
+.top-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+@media (min-width: 768px) {
+  .top-bars {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 16px;
+  }
+}
+.container.dark .insight-card {
+  background: #1e1e1e;
+}
+.month-card {
+  padding: 12px;
+  border-radius: 10px;
+  background: #f5f5f5;
+}
+
+.container.dark .month-card {
+  background: #1e1e1e;
+}
+
+@media (min-width: 768px) {
+  .monthly-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/*  RESPONSIVE BREAKPOINTS */
+
+/* Tablet (≥ 768px) */
+@media (min-width: 768px) {
+  .container { padding: 32px; }
+  
+  .top-bar {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .top-bar select, .top-bar button { width: auto; }
+
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .charts {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .chart-box { flex: 1; min-width: 300px; }
+}
+
+/* Desktop (≥ 1024px) */
+@media (min-width: 1024px) {
+  table { display: table; }
+  .tx-card { display: none; }
+  
+  .tx-form {
+    flex-direction: row;
+    align-items: flex-end;
+  }
+  
+  .tx-form > * { flex: 1; }
+}

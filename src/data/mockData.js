@@ -1,0 +1,38 @@
+export const transactionsData = [
+  
+  { id: 1, date: "2026-04-02", amount: 5000, category: "Salary", type: "income" },
+  { id: 2, date: "2026-04-05", amount: 250, category: "Food", type: "expense" },
+  { id: 3, date: "2026-04-09", amount: 1200, category: "Shopping", type: "expense" },
+  { id: 4, date: "2026-04-12", amount: 1800, category: "Freelance", type: "income" },
+  { id: 5, date: "2026-04-15", amount: 400, category: "Transport", type: "expense" },
+  { id: 6, date: "2026-04-18", amount: 600, category: "Entertainment", type: "expense" },
+  { id: 7, date: "2026-04-22", amount: 900, category: "Health", type: "expense" },
+  { id: 8, date: "2026-04-25", amount: 700, category: "Education", type: "expense" },
+
+  { id: 9, date: "2026-03-01", amount: 4800, category: "Salary", type: "income" },
+  { id: 10, date: "2026-03-04", amount: 300, category: "Food", type: "expense" },
+  { id: 11, date: "2026-03-07", amount: 1000, category: "Shopping", type: "expense" },
+  { id: 12, date: "2026-03-10", amount: 900, category: "Freelance", type: "income" },
+  { id: 13, date: "2026-03-14", amount: 450, category: "Bills", type: "expense" },
+  { id: 14, date: "2026-03-18", amount: 500, category: "Entertainment", type: "expense" },
+  { id: 15, date: "2026-03-21", amount: 650, category: "Health", type: "expense" },
+  { id: 16, date: "2026-03-27", amount: 800, category: "Education", type: "expense" },
+
+  { id: 17, date: "2026-02-02", amount: 4500, category: "Salary", type: "income" },
+  { id: 18, date: "2026-02-05", amount: 200, category: "Food", type: "expense" },
+  { id: 19, date: "2026-02-08", amount: 850, category: "Shopping", type: "expense" },
+  { id: 20, date: "2026-02-11", amount: 700, category: "Freelance", type: "income" },
+  { id: 21, date: "2026-02-15", amount: 300, category: "Transport", type: "expense" },
+  { id: 22, date: "2026-02-18", amount: 550, category: "Entertainment", type: "expense" },
+  { id: 23, date: "2026-02-22", amount: 600, category: "Health", type: "expense" },
+  { id: 24, date: "2026-02-26", amount: 750, category: "Education", type: "expense" },
+
+  { id: 25, date: "2026-01-03", amount: 4000, category: "Salary", type: "income" },
+  { id: 26, date: "2026-01-06", amount: 300, category: "Food", type: "expense" },
+  { id: 27, date: "2026-01-09", amount: 950, category: "Shopping", type: "expense" },
+  { id: 28, date: "2026-01-12", amount: 600, category: "Freelance", type: "income" },
+  { id: 29, date: "2026-01-16", amount: 400, category: "Bills", type: "expense" },
+  { id: 30, date: "2026-01-19", amount: 350, category: "Entertainment", type: "expense" },
+  { id: 31, date: "2026-01-23", amount: 500, category: "Health", type: "expense" },
+  { id: 32, date: "2026-01-28", amount: 650, category: "Education", type: "expense" },
+];
