@@ -1,16 +1,60 @@
-# React + Vite
+React Finance Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+--Setup Instructions--
+git clone https://github.com/your-username/finance-dashboard.git
+cd finance-dashboard
+npm install
+npm install recharts
+npm install framer-motion
+npm install @recharts/devtools
+npm install jspdf jspdf-autotable
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+--Tech Stack--
 
-## React Compiler
+Frontend: React, Recharts, HTML5, CSS3
+Charts & Data Viz: Recharts (LineChart, PieChart, BarChart)
+State Management: React Context (FinanceContext)
+Data Persistence: localStorage
+PDF Export: jspdf + jspdf-autotable
+Optional: Dark mode, animations via CSS transitions
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+--Features--
 
-## Expanding the ESLint configuration
+1. Transactions Management
+Add, edit, and delete transactions locally (saved in localStorage).
+Supports categories:
+* Health
+* Entertainment
+* Education
+* Salary, Freelance, Food, Shopping, etc.
+Filter transactions by category
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+2. Charts & Analytics
+
+* Line Chart: Daily totals, income, and expense.
+* Pie Chart: Expense breakdown by category.
+* Bar Chart: Monthly comparison of income vs expenses.
+* Charts dynamically reflect date range selection.
+
+3. Smart Insights
+
+* Monthly totals for income and expenses and previous month comparison.
+
+4. Download Transaction
+* Download transactions as PDF with table layout.
+
+5. UI & UX
+
+* Dark Mode toggle.
+* Responsive design: Mobile-first, cards for small screens, tables for desktop.
+* Smooth animations and transitions.
+* Consistent, centralized theme variables in CSS.
+
+6. Technical Features
+
+* React Context API for state management.
+* Modular and reusable components: Transactions, Charts, ExportButton.
+* Local storage integration for persistent transactions.
+* Easy-to-extend architecture for additional analytics or categories.
+* 
